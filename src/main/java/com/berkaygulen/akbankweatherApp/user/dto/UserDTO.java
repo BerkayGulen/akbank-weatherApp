@@ -4,7 +4,7 @@ public record UserDTO(
         Long id,
         String firstName,
         String lastName,
-        String userName,
+        String username,
         String email,
         String password
 ) {

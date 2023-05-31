@@ -19,7 +19,7 @@ public class User extends BaseEntity {
     @NotBlank
     private String firstName;
     private String lastName;
-    private String userName;
+    private String username;
     @Email
     private String email;
     private String password;

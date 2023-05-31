@@ -9,7 +9,7 @@ import java.util.Map;
 
 @Data
 @AllArgsConstructor
-@JsonInclude(JsonInclude.Include.NON_NULL)
+//@JsonInclude(JsonInclude.Include.NON_NULL)
 public class GenericErrorMessage {
     private LocalDateTime errorDate;
     private String message;
