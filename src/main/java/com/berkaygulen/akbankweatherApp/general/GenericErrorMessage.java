@@ -20,5 +20,6 @@ public class GenericErrorMessage {
         this.errorDate = errorDate;
         this.message = message;
         this.detail = detail;
+        this.validationErrors =null;
     }
 }

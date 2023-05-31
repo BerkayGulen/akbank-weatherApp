@@ -57,7 +57,7 @@ class UserSignUpPage extends React.Component {
                     <Input  label={"Last Name"} name={"lastName"} error={lastName} onChange={this.onChange}></Input>
                     <Input  label={"UserName"} name={"username"} error={username} onChange={this.onChange}></Input>
                     <Input  label={"Email"} name={"email"} error={email} onChange={this.onChange}></Input>
-                    <Input  label={"Password"} name={"password"} error={password} onChange={this.onChange}></Input>
+                    <Input  label={"Password"} name={"password"} error={password} onChange={this.onChange} type={"password"}></Input>
 
                     <div className={"text-center "}>
                         <button

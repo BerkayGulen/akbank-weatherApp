@@ -17,7 +17,7 @@ public class UserControllerContractImpl implements UserControllerContract{
 
     @Override
     public UserDTO save(UserSaveRequestDTO userSaveRequestDTO) {
-        User user = UserMapper.INSTANCE.convertToCustomer(userSaveRequestDTO);
+        @Valid User user = UserMapper.INSTANCE.convertToCustomer(userSaveRequestDTO);
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         user = userEntityService.save(user);
         return UserMapper.INSTANCE.convertToCustomerDTO(user);
