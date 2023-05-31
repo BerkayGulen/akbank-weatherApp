@@ -6,7 +6,10 @@ class UserSignUpPage extends React.Component {
 
     state = {
         username: null,
-        displayName: null,
+        firstName: null,
+        lastName: null,
+        email: null,
+        // displayName: null,
         password: null,
         passwordRepeat: null
     }
@@ -19,8 +22,8 @@ class UserSignUpPage extends React.Component {
 
      onClickSignUp = event=> {
         event.preventDefault();
-        const {username,displayName,password} = this.state;
-        const body = {username ,displayName,password};
+        const {username,firstName,lastName,email,displayName,password} = this.state;
+        const body = {username ,firstName,lastName,email,password};
 
         axios.post("/api/v1/users",body)
     }
@@ -34,8 +37,20 @@ class UserSignUpPage extends React.Component {
                 </div>
                 <div>
                     <label>Display Name</label>
-                    <input name="displayName" onChange={this.onChange}/>
+                    <input name="firstName" onChange={this.onChange}/>
                 </div>
+                <div>
+                    <label>Display Name</label>
+                    <input name="lastName" onChange={this.onChange}/>
+                </div>
+                <div>
+                    <label>Display Name</label>
+                    <input name="email" onChange={this.onChange}/>
+                </div>
+                {/*<div>*/}
+                {/*    <label>Display Name</label>*/}
+                {/*    <input name="displayName" onChange={this.onChange}/>*/}
+                {/*</div>*/}
                 <div>
                     <label>Password</label>
                     <input name="password" type={"password"} onChange={this.onChange}/>

@@ -4,10 +4,13 @@ package com.berkaygulen.akbankweatherApp.user;
 import com.berkaygulen.akbankweatherApp.errorMessages.UserErrorMessages;
 import com.berkaygulen.akbankweatherApp.general.BusinessException;
 import com.berkaygulen.akbankweatherApp.general.RestResponse;
+import com.berkaygulen.akbankweatherApp.user.dto.UserDTO;
+import com.berkaygulen.akbankweatherApp.user.dto.UserSaveRequestDTO;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,12 +20,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @CrossOrigin
 @RequiredArgsConstructor
+@Validated
 public class UserController {
-    private final UserRepository userRepository;
+
+    private final UserControllerContractImpl userControllerContract;
+
+
     @PostMapping("/api/v1/users")
-    void sendUser(@Valid @RequestBody User body){
-        userRepository.save(body);
-        log.atInfo().log(body.toString());
+    ResponseEntity<RestResponse<UserDTO>> sendUser(@Valid @RequestBody UserSaveRequestDTO userSaveRequestDTO){
+        UserDTO userDTO = userControllerContract.save(userSaveRequestDTO);
+        log.atInfo().log(userDTO.toString());
+        return ResponseEntity.ok(RestResponse.of(userDTO));
 
     }
     @PostMapping("/api/v1/error")
