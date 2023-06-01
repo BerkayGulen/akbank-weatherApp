@@ -36,7 +36,6 @@ class UserSignUpPage extends React.Component {
             const response = await signUp(body);
 
         } catch (error) {
-            debugger
             if (error.response.data.data.validationErrors){
                 this.setState({errors:error.response.data.data.validationErrors});
             }
@@ -50,7 +49,7 @@ class UserSignUpPage extends React.Component {
         const {firstName,lastName,username,email,password} = errors;
 
         return (
-            <div className="container">
+            <div className="container pt-5">
                 <form>
                     <h1 className="text-center">Sign up</h1>
                     <Input  label={"First Name"} name={"firstName"} error={firstName} onChange={this.onChange}></Input>
@@ -59,7 +58,7 @@ class UserSignUpPage extends React.Component {
                     <Input  label={"Email"} name={"email"} error={email} onChange={this.onChange}></Input>
                     <Input  label={"Password"} name={"password"} error={password} onChange={this.onChange} type={"password"}></Input>
 
-                    <div className={"text-center "}>
+                    <div className={"text-center pt-3 "}>
                         <button
                             className={"btn btn-primary"}
                             onClick={this.onClickSignUp}

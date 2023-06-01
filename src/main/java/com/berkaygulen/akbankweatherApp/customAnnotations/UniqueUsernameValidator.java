@@ -1,4 +1,4 @@
-package com.berkaygulen.akbankweatherApp.customAnnotation;
+package com.berkaygulen.akbankweatherApp.customAnnotations;
 
 import com.berkaygulen.akbankweatherApp.user.User;
 import com.berkaygulen.akbankweatherApp.user.UserEntityService;

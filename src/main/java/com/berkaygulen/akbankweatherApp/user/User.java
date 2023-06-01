@@ -1,5 +1,4 @@
 package com.berkaygulen.akbankweatherApp.user;
-import com.berkaygulen.akbankweatherApp.customAnnotation.UniqueUsername;
 import com.berkaygulen.akbankweatherApp.general.BaseEntity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;

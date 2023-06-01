@@ -1,4 +1,4 @@
-package com.berkaygulen.akbankweatherApp.customAnnotation;
+package com.berkaygulen.akbankweatherApp.customAnnotations;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;

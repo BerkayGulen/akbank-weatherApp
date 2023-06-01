@@ -7,7 +7,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.validation.annotation.Validated;
 
 @Service
 @RequiredArgsConstructor
@@ -17,9 +16,9 @@ public class UserControllerContractImpl implements UserControllerContract{
 
     @Override
     public UserDTO save(UserSaveRequestDTO userSaveRequestDTO) {
-        @Valid User user = UserMapper.INSTANCE.convertToCustomer(userSaveRequestDTO);
+        User user = UserMapper.INSTANCE.convertToUser(userSaveRequestDTO);
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         user = userEntityService.save(user);
-        return UserMapper.INSTANCE.convertToCustomerDTO(user);
+        return UserMapper.INSTANCE.convertToUserDTO(user);
     }
 }

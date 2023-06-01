@@ -1,25 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import userLoginPage from "./pages/UserLoginPage";
+import userSignUpPage from "./pages/UserSignUpPage";
+import homePage from "./pages/HomePage";
+import UserSignUpPage from "./pages/UserSignUpPage";
+import HomePage from "./pages/HomePage";
+import {BrowserRouter, HashRouter, Redirect, Route, Switch} from "react-router-dom";
+import UserLoginPage from "./pages/UserLoginPage";
+import TopBar from "./components/TopBar";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and saveee to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div>
+            <HashRouter>
+                <TopBar/>
+                <Switch>
+                    <Route exact path="/" component={HomePage}/>
+                    <Route path="/login" component={UserLoginPage}/>
+                    <Route path="/signUp" component={UserSignUpPage}/>
+                    <Redirect to="/"/>
+                </Switch>
+            </HashRouter>
+        </div>
+    );
 }
 
 export default App;

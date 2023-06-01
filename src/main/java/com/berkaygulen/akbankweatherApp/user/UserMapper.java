@@ -14,11 +14,11 @@ import java.util.List;
 public interface UserMapper {
     UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
 
-    User convertToCustomer(UserSaveRequestDTO customerSaveRequestDTO);
+    User convertToUser(UserSaveRequestDTO customerSaveRequestDTO);
 
-    UserDTO convertToCustomerDTO(User customer);
+    UserDTO convertToUserDTO(User customer);
 
-    List<UserDTO> convertToCustomerDTOList(List<User> customerList);
+//    List<UserDTO> convertToCustomerDTOList(List<User> customerList);
 
 //    Customer updateCustomer(@MappingTarget Customer customer, CustomerUpdateRequestDto customerUpdateRequestDto);
 }
