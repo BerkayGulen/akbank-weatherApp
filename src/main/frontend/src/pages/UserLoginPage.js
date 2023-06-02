@@ -2,12 +2,17 @@ import React, {Component} from 'react';
 import Input from "../components/input";
 import {login, signUp} from "../api/apiCalls";
 import Swal from 'sweetalert2'
+import { Redirect } from 'react-router-dom';
+
+
 
 class UserLoginPage extends Component {
     state = {
         email:null,
-        password:null
+        password:null,
+        redirect: false
     }
+
 
     onChange =event =>{
         const {name,value} = event.target;
@@ -24,6 +29,16 @@ class UserLoginPage extends Component {
         }
         try {
             const response = await login(credentials);
+            Swal.fire({
+                position: 'bottom-end',
+                icon: 'success',
+                title: 'Successfully Logged in',
+                showConfirmButton: false,
+                timer: 1500
+            });
+            this.setState({ redirect: true })
+
+
 
         } catch (error) {
             if (error.response.data.data.validationErrors){
@@ -32,10 +47,8 @@ class UserLoginPage extends Component {
            await Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
-                text: 'Something went wrong!',
-                footer: '<a href="">Why do I have this issue?</a>'
+                text: 'wrong credentials :(',
             });
-            console.log("direkt");
 
         }
     }
@@ -48,10 +61,10 @@ class UserLoginPage extends Component {
                     <Input label={"Email"} name={"email"} onChange={this.onChange}></Input>
                     <Input label={"Password"} name={"password"} type={"password"} onChange={this.onChange}></Input>
                     <div className={"text-center pt-3"}>
-                        <button className={"btn btn-primary"} onClick={this.onClickLogin}>Login</button>
+                        <button className={"btn btn-outline-primary"} onClick={this.onClickLogin}>Login</button>
                     </div>
-
                 </form>
+                { this.state.redirect ? (<Redirect push to="/"/>) : null }
             </div>
         );
     }

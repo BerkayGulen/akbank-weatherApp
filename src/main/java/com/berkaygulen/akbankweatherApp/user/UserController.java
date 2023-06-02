@@ -11,13 +11,11 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RestController
+@RequestMapping("/api/v1")
 @CrossOrigin
 @RequiredArgsConstructor
 @Validated
@@ -26,18 +24,18 @@ public class UserController {
     private final UserControllerContractImpl userControllerContract;
 
 
-    @PostMapping("/api/v1/users")
+    @PostMapping("/users")
     ResponseEntity<RestResponse<UserDTO>> sendUser( @Valid @RequestBody UserSaveRequestDTO userSaveRequestDTO){
         UserDTO userDTO = userControllerContract.save(userSaveRequestDTO);
         log.atInfo().log(userDTO.toString());
         return ResponseEntity.ok(RestResponse.of(userDTO));
 
     }
-    @PostMapping("/api/v1/error")
-    ResponseEntity<RestResponse<String>> error(){
-        throw new BusinessException(UserErrorMessages.USER_NOT_FOUND);
-//        return  ResponseEntity.ok(RestResponse.error("adasd"));
-
-
-    }
+//    @PostMapping("/api/v1/error")
+//    ResponseEntity<RestResponse<String>> error(){
+//        throw new BusinessException(UserErrorMessages.USER_NOT_FOUND);
+////        return  ResponseEntity.ok(RestResponse.error("adasd"));
+//
+//
+//    }
 }

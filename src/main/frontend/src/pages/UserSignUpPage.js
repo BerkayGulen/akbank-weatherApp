@@ -2,6 +2,9 @@ import React from "react";
 // import axios from "axios";
 import {signUp} from '../api/apiCalls';
 import Input from "../components/input";
+import { Redirect } from 'react-router-dom';
+import Swal from "sweetalert2";
+
 
 
 class UserSignUpPage extends React.Component {
@@ -14,7 +17,9 @@ class UserSignUpPage extends React.Component {
         // displayName: null,
         password: null,
         pendingApiCall: false,
-        errors: {}
+        errors: {},
+        redirect: false
+
     }
     onChange = event => {
         const {name, value} = event.target;
@@ -34,6 +39,14 @@ class UserSignUpPage extends React.Component {
 
         try {
             const response = await signUp(body);
+            Swal.fire({
+                position: 'bottom-end',
+                icon: 'success',
+                title: 'Successfully Signed in',
+                showConfirmButton: false,
+                timer: 1500
+            });
+            this.setState({ redirect: true })
 
         } catch (error) {
             if (error.response.data.data.validationErrors){
@@ -60,7 +73,7 @@ class UserSignUpPage extends React.Component {
 
                     <div className={"text-center pt-3 "}>
                         <button
-                            className={"btn btn-primary"}
+                            className={"btn btn-outline-primary"}
                             onClick={this.onClickSignUp}
                             disabled={pendingApiCall}>
                             {pendingApiCall &&
@@ -68,9 +81,8 @@ class UserSignUpPage extends React.Component {
                                       aria-hidden={true}></span>}Sign Up
                         </button>
                     </div>
-
-
                 </form>
+                { this.state.redirect ? (<Redirect push to="/"/>) : null }
 
             </div>
         );
