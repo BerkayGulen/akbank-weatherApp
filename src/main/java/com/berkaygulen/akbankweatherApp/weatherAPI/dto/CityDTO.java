@@ -1,4 +1,4 @@
-package com.berkaygulen.akbankweatherApp.weatherAPI;
+package com.berkaygulen.akbankweatherApp.weatherAPI.dto;
 
 public record CityDTO(
         String name,

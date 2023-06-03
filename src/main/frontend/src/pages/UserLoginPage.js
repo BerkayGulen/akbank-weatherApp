@@ -30,7 +30,7 @@ class UserLoginPage extends Component {
         try {
             const response = await login(credentials);
             Swal.fire({
-                position: 'bottom-end',
+                position: 'center',
                 icon: 'success',
                 title: 'Successfully Logged in',
                 showConfirmButton: false,

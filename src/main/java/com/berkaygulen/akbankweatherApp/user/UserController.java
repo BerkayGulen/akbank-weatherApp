@@ -25,7 +25,7 @@ public class UserController {
 
 
     @PostMapping("/users")
-    ResponseEntity<RestResponse<UserDTO>> sendUser( @Valid @RequestBody UserSaveRequestDTO userSaveRequestDTO){
+    ResponseEntity<RestResponse<UserDTO>> save( @Valid @RequestBody UserSaveRequestDTO userSaveRequestDTO){
         UserDTO userDTO = userControllerContract.save(userSaveRequestDTO);
         log.atInfo().log(userDTO.toString());
         return ResponseEntity.ok(RestResponse.of(userDTO));

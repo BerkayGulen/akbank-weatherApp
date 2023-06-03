@@ -40,7 +40,7 @@ class UserSignUpPage extends React.Component {
         try {
             const response = await signUp(body);
             Swal.fire({
-                position: 'bottom-end',
+                position: 'center',
                 icon: 'success',
                 title: 'Successfully Signed in',
                 showConfirmButton: false,
