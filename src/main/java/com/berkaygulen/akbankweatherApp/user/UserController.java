@@ -2,6 +2,7 @@ package com.berkaygulen.akbankweatherApp.user;
 
 
 import com.berkaygulen.akbankweatherApp.errorMessages.UserErrorMessages;
+import com.berkaygulen.akbankweatherApp.favouriteCities.dto.FavouriteCitiesDTO;
 import com.berkaygulen.akbankweatherApp.general.BusinessException;
 import com.berkaygulen.akbankweatherApp.general.RestResponse;
 import com.berkaygulen.akbankweatherApp.user.dto.UserDTO;
@@ -13,9 +14,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+
 @Slf4j
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api/v1/users")
 @CrossOrigin
 @RequiredArgsConstructor
 @Validated
@@ -24,18 +26,12 @@ public class UserController {
     private final UserControllerContractImpl userControllerContract;
 
 
-    @PostMapping("/users")
+    @PostMapping
     ResponseEntity<RestResponse<UserDTO>> save( @Valid @RequestBody UserSaveRequestDTO userSaveRequestDTO){
         UserDTO userDTO = userControllerContract.save(userSaveRequestDTO);
-        log.atInfo().log(userDTO.toString());
         return ResponseEntity.ok(RestResponse.of(userDTO));
-
     }
-//    @PostMapping("/api/v1/error")
-//    ResponseEntity<RestResponse<String>> error(){
-//        throw new BusinessException(UserErrorMessages.USER_NOT_FOUND);
-////        return  ResponseEntity.ok(RestResponse.error("adasd"));
-//
-//
-//    }
+
+
+
 }

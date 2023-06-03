@@ -1,0 +1,105 @@
+package com.berkaygulen.akbankweatherApp.favouriteCities;
+
+import com.berkaygulen.akbankweatherApp.errorMessages.UserErrorMessages;
+import com.berkaygulen.akbankweatherApp.exceptions.NotFoundException;
+import com.berkaygulen.akbankweatherApp.favouriteCities.dto.FavouriteCitiesDTO;
+import com.berkaygulen.akbankweatherApp.favouriteCities.dto.FavouriteCitiesSaveOrDeleteRequestDTO;
+import com.berkaygulen.akbankweatherApp.general.BusinessException;
+import com.berkaygulen.akbankweatherApp.user.User;
+import com.berkaygulen.akbankweatherApp.user.UserEntityService;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+@Service
+@Getter
+@Setter
+@RequiredArgsConstructor
+public class FavouriteCitiesControllerContractImpl implements FavouriteCitiesControllerContract {
+
+    private final FavouriteCitiesEntityService favouriteCitiesEntityService;
+    private final UserEntityService userEntityService;
+
+
+    @Override
+    public FavouriteCitiesDTO save(FavouriteCitiesSaveOrDeleteRequestDTO favouriteCitiesSaveOrDeleteRequestDTO) {
+        Long userId = favouriteCitiesSaveOrDeleteRequestDTO.userId();
+        String cityName = favouriteCitiesSaveOrDeleteRequestDTO.cityName();
+        FavouriteCities favouriteCities = null;
+
+        if (isUserNotExists(userId)){
+            throw new NotFoundException(UserErrorMessages.USER_NOT_FOUND);
+
+        }
+        if (isUserHasThisCity(userId, cityName)){
+                throw new BusinessException(UserErrorMessages.USER_HAS_THIS_CITY);
+        }
+
+
+        favouriteCities = FavouriteCityMapper.INSTANCE.convertToFavouriteCity(favouriteCitiesSaveOrDeleteRequestDTO);
+        favouriteCitiesEntityService.save(favouriteCities);
+        return FavouriteCityMapper.INSTANCE.convertToFavouriteCityDTO(favouriteCities);
+
+    }
+
+    @Override
+    public List<FavouriteCitiesDTO> getAll(Long userId) {
+        List<FavouriteCities> favouriteCitiesByUserId = null;
+        if (isUserNotExists(userId)){
+            throw new NotFoundException(UserErrorMessages.USER_NOT_FOUND);
+        }
+
+        favouriteCitiesByUserId = favouriteCitiesEntityService.findFavouriteCitiesByUserId(userId);
+        if (favouriteCitiesByUserId.isEmpty()) {
+            throw new BusinessException(UserErrorMessages.USER_HAS_NO_FAVOURITES);
+        }
+
+        return FavouriteCityMapper.INSTANCE.convertToFavouriteCityDTOList(favouriteCitiesByUserId);
+
+    }
+
+
+    @Override
+    public void removeFavouriteCity(FavouriteCitiesSaveOrDeleteRequestDTO favouriteCitiesSaveOrDeleteRequestDTO) {
+
+        Long userId = favouriteCitiesSaveOrDeleteRequestDTO.userId();
+        String cityName = favouriteCitiesSaveOrDeleteRequestDTO.cityName();
+
+      if (isUserNotExists(userId)){
+          throw new NotFoundException(UserErrorMessages.USER_NOT_FOUND);
+      }
+
+      if (!isUserHasThisCity(userId, cityName)){
+          throw new BusinessException(UserErrorMessages.USER_HAS_NOT_HAVE_THIS_CITY);
+      }
+
+        FavouriteCities byUserIdAndCityName = favouriteCitiesEntityService.findByUserIdAndCityName(favouriteCitiesSaveOrDeleteRequestDTO);
+        favouriteCitiesEntityService.delete(byUserIdAndCityName);
+    }
+
+    private boolean isUserNotExists(Long userId) {
+        Optional<User> optionalUser = userEntityService.findById(userId);
+        if (optionalUser.isEmpty()) {
+            return true;
+        }
+        return false;
+    }
+
+    private boolean isUserHasThisCity(Long userId, String cityName) {
+        List<FavouriteCities> favouriteCitiesByUserId = favouriteCitiesEntityService.findFavouriteCitiesByUserId(userId);
+
+        if (!favouriteCitiesByUserId.isEmpty()) {
+            boolean hasCity = favouriteCitiesByUserId.stream()
+                    .anyMatch(item -> item.getCityName().equals(cityName));
+            if (hasCity) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+}

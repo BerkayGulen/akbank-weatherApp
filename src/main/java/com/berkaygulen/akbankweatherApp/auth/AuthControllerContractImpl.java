@@ -34,6 +34,7 @@ public class AuthControllerContractImpl implements AuthControllerContract {
         String hashedPassword = user.getPassword();
 
         if (!passwordEncoder.matches(loginRequest.password(),hashedPassword)){
+
             throw new UnauthorizedException(AuthenticationErrorMessages.UNAUTHORIZED_REQUEST);
         }
 

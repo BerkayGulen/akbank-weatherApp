@@ -1,5 +1,6 @@
 package com.berkaygulen.akbankweatherApp.general;
 
+import com.berkaygulen.akbankweatherApp.exceptions.NotFoundException;
 import com.berkaygulen.akbankweatherApp.exceptions.UnauthorizedException;
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
@@ -53,6 +54,17 @@ public class CustomExceptionHandler {
         var response = RestResponse.error(genericErrorMessage);
 
         return new ResponseEntity<>(response, HttpStatus.UNAUTHORIZED);
+    }
+    @ExceptionHandler
+    public final ResponseEntity<Object> handleAllExceptions(NotFoundException e, WebRequest webRequest) {
+
+        String message = e.getBaseErrorMessage().getMessage();
+        String description = webRequest.getDescription(false);
+
+        var genericErrorMessage = new GenericErrorMessage(LocalDateTime.now(), message, description);
+        var response = RestResponse.error(genericErrorMessage);
+
+        return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
     }
 
     @ExceptionHandler
