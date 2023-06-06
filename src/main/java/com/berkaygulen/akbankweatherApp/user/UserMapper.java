@@ -2,6 +2,7 @@ package com.berkaygulen.akbankweatherApp.user;
 
 import com.berkaygulen.akbankweatherApp.user.dto.UserDTO;
 import com.berkaygulen.akbankweatherApp.user.dto.UserSaveRequestDTO;
+import com.berkaygulen.akbankweatherApp.user.dto.UserUpdateRequestDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
 import org.mapstruct.ReportingPolicy;
@@ -18,7 +19,7 @@ public interface UserMapper {
 
     UserDTO convertToUserDTO(User customer);
 
-//    List<UserDTO> convertToCustomerDTOList(List<User> customerList);
+    List<UserDTO> convertToUserDTOList(List<User> userList);
 
-//    Customer updateCustomer(@MappingTarget Customer customer, CustomerUpdateRequestDto customerUpdateRequestDto);
+    User updateUser(@MappingTarget User user, UserUpdateRequestDTO userUpdateRequestDTO);
 }
