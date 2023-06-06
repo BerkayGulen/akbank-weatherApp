@@ -1,8 +1,8 @@
 package com.berkaygulen.akbankweatherApp.general;
-
 import com.berkaygulen.akbankweatherApp.exceptions.NotFoundException;
 import com.berkaygulen.akbankweatherApp.exceptions.UnauthorizedException;
 import jakarta.validation.ConstraintViolationException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -19,6 +19,7 @@ import java.util.Map;
 
 @RestController
 @ControllerAdvice
+@Slf4j
 public class CustomExceptionHandler {
     @ExceptionHandler
     public final ResponseEntity<Object> handleAllExceptions(Exception e, WebRequest webRequest) {
@@ -30,6 +31,7 @@ public class CustomExceptionHandler {
         String description = webRequest.getDescription(false);
         var genericErrorMessage = new GenericErrorMessage(LocalDateTime.now(), message, description);
         var response = RestResponse.error(genericErrorMessage);
+
 
         return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
     }
@@ -63,6 +65,7 @@ public class CustomExceptionHandler {
 
         var genericErrorMessage = new GenericErrorMessage(LocalDateTime.now(), message, description);
         var response = RestResponse.error(genericErrorMessage);
+
 
         return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
     }
