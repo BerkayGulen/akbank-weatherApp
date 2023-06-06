@@ -13,6 +13,6 @@ public interface UserControllerContract {
     List<UserDTO> findAll();
     UserDTO findById(Long id);
     void delete(Long id);
-    UserDTO updateCustomer(Long id, UserUpdateRequestDTO userUpdateRequestDTO);
+    UserDTO updateUser(Long id, UserUpdateRequestDTO userUpdateRequestDTO);
 
 }

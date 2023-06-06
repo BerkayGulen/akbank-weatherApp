@@ -56,7 +56,7 @@ public class UserControllerContractImpl implements UserControllerContract{
     @Override
     public void delete(Long id) {
         Optional<User> optionalUser = userEntityService.findById(id);
-        if (!optionalUser.isPresent()){
+        if (optionalUser.isEmpty()){
             log.warn("User with id: {} not found",id);
             throw new NotFoundException(UserErrorMessages.USER_NOT_FOUND);
         }
@@ -67,7 +67,7 @@ public class UserControllerContractImpl implements UserControllerContract{
     }
 
     @Override
-    public UserDTO updateCustomer(Long id, UserUpdateRequestDTO userUpdateRequestDTO) {
+    public UserDTO updateUser(Long id, UserUpdateRequestDTO userUpdateRequestDTO) {
         User user = null;
         Optional<User> optionalUser = userEntityService.findById(id);
         if (optionalUser.isPresent()){
