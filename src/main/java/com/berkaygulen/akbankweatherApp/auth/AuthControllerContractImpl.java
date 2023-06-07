@@ -1,6 +1,6 @@
 package com.berkaygulen.akbankweatherApp.auth;
 
-import com.berkaygulen.akbankweatherApp.auth.dto.LoginRequest;
+import com.berkaygulen.akbankweatherApp.auth.dto.LoginRequestDTO;
 import com.berkaygulen.akbankweatherApp.errorMessages.AuthenticationErrorMessages;
 import com.berkaygulen.akbankweatherApp.exceptions.UnauthorizedException;
 import com.berkaygulen.akbankweatherApp.user.User;
@@ -13,32 +13,32 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.Base64;
-
 @Service
 @RequiredArgsConstructor
 @Slf4j
 public class AuthControllerContractImpl implements AuthControllerContract {
     private final UserEntityService userEntityService;
     private PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+    String hashedPassword = passwordEncoder.encode("1231234");
+
 
 
 
     @Override
-    public UserDTO login(LoginRequest loginRequest) {
-        if (loginRequest.email()==null ||loginRequest.password()==null){
-            log.error("Login request rejected. email: {} ",loginRequest.email());
+    public UserDTO login(LoginRequestDTO loginRequestDTO) {
+        if (loginRequestDTO.email()==null || loginRequestDTO.password()==null){
+            log.warn("Login request rejected. email: {} ", loginRequestDTO.email());
             throw new UnauthorizedException(AuthenticationErrorMessages.UNAUTHORIZED_REQUEST);
         }
-        User user = userEntityService.findUserEmail(loginRequest.email());
+        User user = userEntityService.findUserEmail(loginRequestDTO.email());
         if (user == null){
-            log.error("User with email: {} not found",loginRequest.email());
+            log.warn("User with email: {} not found", loginRequestDTO.email());
             throw new UnauthorizedException(AuthenticationErrorMessages.UNAUTHORIZED_REQUEST);
         }
         String hashedPassword = user.getPassword();
 
-        if (!passwordEncoder.matches(loginRequest.password(),hashedPassword)){
-            log.error("Login request rejected. Password won't match. User: {} with email: {}", user.getId(),user.getEmail());
+        if (!passwordEncoder.matches(loginRequestDTO.password(),hashedPassword)){
+            log.warn("Login request rejected. Password won't match. User: {} with email: {}", user.getId(),user.getEmail());
             throw new UnauthorizedException(AuthenticationErrorMessages.UNAUTHORIZED_REQUEST);
         }
 

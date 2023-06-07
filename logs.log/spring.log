@@ -1,493 +1,276 @@
-13:53:03.174 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarting - Starting AkbankWeatherAppApplication using Java 19 with PID 21648 (C:\Users\berka\Desktop\akbank-weatherApp\target\classes started by berka in C:\Users\berka\Desktop\akbank-weatherApp)
-13:53:03.176 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
-13:53:03.245 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-13:53:03.245 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-13:53:04.739 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
-13:53:04.741 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-13:53:04.772 INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkaygulen.akbankweatherApp.favouriteCities.FavouriteCitiesRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-13:53:04.773 INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkaygulen.akbankweatherApp.user.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-13:53:04.773 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 29 ms. Found 0 JDBC repository interfaces.
-13:53:04.783 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
-13:53:04.784 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-13:53:04.824 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 37 ms. Found 2 JPA repository interfaces.
-13:53:05.044 INFO  org.springframework.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=2a93cbe8-75c0-3b46-ab4d-f722f73e298d
-13:53:05.105 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'com.berkaygulen.akbankweatherApp.weatherAPI.WeatherAPI' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-13:53:05.571 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-13:53:05.579 INFO  org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
-13:53:05.580 INFO  org.apache.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.8]
-13:53:05.640 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-13:53:05.640 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2391 ms
-13:53:05.669 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-13:53:05.858 INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5a1d6d10
-13:53:05.860 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-13:53:05.871 INFO  org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.logDataSources - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/akbank_weatherApp'
-13:53:06.005 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-13:53:06.075 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.2.2.Final
-13:53:06.078 INFO  org.hibernate.cfg.Environment.<clinit> - HHH000406: Using bytecode reflection optimizer
-13:53:06.224 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
-13:53:06.369 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
-13:53:06.427 INFO  org.hibernate.orm.dialect.logSelectedDialect - HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@26bb1669
-13:53:06.649 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
-13:53:07.353 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-13:53:07.396 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-13:53:07.891 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-13:53:07.985 INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
-13:53:08.975 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
-13:53:09.021 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarted - Started AkbankWeatherAppApplication in 6.643 seconds (process running for 7.983)
-13:53:18.145 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-13:53:18.145 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
-13:53:18.148 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
-13:53:18.669 INFO  org.springdoc.api.AbstractOpenApiResource.getOpenApi - Init duration for springdoc-openapi is: 326 ms
-13:53:28.337 ERROR com.berkaygulen.akbankweatherApp.favouriteCities.FavouriteCitiesControllerContractImpl.getAll - asdasas
-13:53:28.487 INFO  com.berkaygulen.akbankweatherApp.favouriteCities.FavouriteCitiesControllerContractImpl.getAll - User favourites successfully fetched: [com.berkaygulen.akbankweatherApp.favouriteCities.FavouriteCities@152d3b89, com.berkaygulen.akbankweatherApp.favouriteCities.FavouriteCities@33cfafad]
-13:55:02.821 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-13:55:02.825 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-13:55:02.828 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
-13:55:06.704 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarting - Starting AkbankWeatherAppApplication using Java 19 with PID 14676 (C:\Users\berka\Desktop\akbank-weatherApp\target\classes started by berka in C:\Users\berka\Desktop\akbank-weatherApp)
-13:55:06.706 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
-13:55:06.750 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-13:55:06.751 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-13:55:07.546 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
-13:55:07.548 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-13:55:07.577 INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkaygulen.akbankweatherApp.favouriteCities.FavouriteCitiesRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-13:55:07.578 INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkaygulen.akbankweatherApp.user.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-13:55:07.578 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 28 ms. Found 0 JDBC repository interfaces.
-13:55:07.588 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
-13:55:07.590 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-13:55:07.618 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 25 ms. Found 2 JPA repository interfaces.
-13:55:07.796 INFO  org.springframework.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=2a93cbe8-75c0-3b46-ab4d-f722f73e298d
-13:55:07.863 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'com.berkaygulen.akbankweatherApp.weatherAPI.WeatherAPI' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-13:55:08.310 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-13:55:08.318 INFO  org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
-13:55:08.318 INFO  org.apache.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.8]
-13:55:08.379 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-13:55:08.379 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1628 ms
-13:55:08.409 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-13:55:08.575 INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@a2505fc
-13:55:08.577 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-13:55:08.586 INFO  org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.logDataSources - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/akbank_weatherApp'
-13:55:08.692 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-13:55:08.745 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.2.2.Final
-13:55:08.747 INFO  org.hibernate.cfg.Environment.<clinit> - HHH000406: Using bytecode reflection optimizer
-13:55:08.880 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
-13:55:09.002 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
-13:55:09.055 INFO  org.hibernate.orm.dialect.logSelectedDialect - HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@572f80eb
-13:55:09.251 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
-13:55:09.888 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-13:55:09.938 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-13:55:10.451 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-13:55:10.568 INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
-13:55:11.653 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
-13:55:11.697 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarted - Started AkbankWeatherAppApplication in 5.496 seconds (process running for 6.225)
-13:55:11.897 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-13:55:11.898 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
-13:55:11.900 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
-13:55:11.927 ERROR com.berkaygulen.akbankweatherApp.favouriteCities.FavouriteCitiesControllerContractImpl.getAll - asdasas
-13:55:12.088 INFO  com.berkaygulen.akbankweatherApp.favouriteCities.FavouriteCitiesControllerContractImpl.getAll - User favourites successfully fetched: asdaabbc
-13:55:31.310 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-13:55:31.313 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-13:55:31.317 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
-13:55:35.172 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarting - Starting AkbankWeatherAppApplication using Java 19 with PID 7784 (C:\Users\berka\Desktop\akbank-weatherApp\target\classes started by berka in C:\Users\berka\Desktop\akbank-weatherApp)
-13:55:35.174 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
-13:55:35.218 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-13:55:35.218 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-13:55:36.023 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
-13:55:36.024 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-13:55:36.051 INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkaygulen.akbankweatherApp.favouriteCities.FavouriteCitiesRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-13:55:36.053 INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkaygulen.akbankweatherApp.user.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-13:55:36.053 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 26 ms. Found 0 JDBC repository interfaces.
-13:55:36.065 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
-13:55:36.066 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-13:55:36.097 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 28 ms. Found 2 JPA repository interfaces.
-13:55:36.278 INFO  org.springframework.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=2a93cbe8-75c0-3b46-ab4d-f722f73e298d
-13:55:36.344 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'com.berkaygulen.akbankweatherApp.weatherAPI.WeatherAPI' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-13:55:36.802 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-13:55:36.810 INFO  org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
-13:55:36.810 INFO  org.apache.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.8]
-13:55:36.868 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-13:55:36.868 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1649 ms
-13:55:36.898 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-13:55:37.069 INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5a099d54
-13:55:37.071 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-13:55:37.079 INFO  org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.logDataSources - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/akbank_weatherApp'
-13:55:37.184 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-13:55:37.235 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.2.2.Final
-13:55:37.237 INFO  org.hibernate.cfg.Environment.<clinit> - HHH000406: Using bytecode reflection optimizer
-13:55:37.373 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
-13:55:37.499 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
-13:55:37.555 INFO  org.hibernate.orm.dialect.logSelectedDialect - HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@7674c0a5
-13:55:37.758 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
-13:55:38.357 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-13:55:38.399 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-13:55:38.887 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-13:55:38.989 INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
-13:55:40.047 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
-13:55:40.094 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarted - Started AkbankWeatherAppApplication in 5.379 seconds (process running for 6.09)
-13:55:40.300 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-13:55:40.301 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
-13:55:40.303 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
-13:55:40.337 ERROR com.berkaygulen.akbankweatherApp.favouriteCities.FavouriteCitiesControllerContractImpl.getAll - asdasas
-13:55:40.506 INFO  com.berkaygulen.akbankweatherApp.favouriteCities.FavouriteCitiesControllerContractImpl.getAll - User favourites successfully fetched: [asda, abbc]
-13:56:59.914 ERROR com.berkaygulen.akbankweatherApp.favouriteCities.FavouriteCitiesControllerContractImpl.getAll - asdasas
-13:56:59.919 INFO  com.berkaygulen.akbankweatherApp.favouriteCities.FavouriteCitiesControllerContractImpl.getAll - User favourites successfully fetched: [asda, abbc]
-13:57:04.309 ERROR com.berkaygulen.akbankweatherApp.favouriteCities.FavouriteCitiesControllerContractImpl.getAll - asdasas
-13:57:04.314 INFO  com.berkaygulen.akbankweatherApp.favouriteCities.FavouriteCitiesControllerContractImpl.getAll - User favourites successfully fetched: [asda, abbc]
-13:57:10.566 ERROR com.berkaygulen.akbankweatherApp.favouriteCities.FavouriteCitiesControllerContractImpl.getAll - asdasas
-13:57:43.477 INFO  com.berkaygulen.akbankweatherApp.favouriteCities.FavouriteCitiesControllerContractImpl.getAll - User favourites successfully fetched: [asda, abbc]
-14:08:21.725 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-14:08:21.729 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-14:08:21.734 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
-14:08:25.955 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarting - Starting AkbankWeatherAppApplication using Java 19 with PID 10316 (C:\Users\berka\Desktop\akbank-weatherApp\target\classes started by berka in C:\Users\berka\Desktop\akbank-weatherApp)
-14:08:25.958 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
-14:08:26.000 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-14:08:26.000 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-14:08:26.779 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
-14:08:26.780 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-14:08:26.813 INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkaygulen.akbankweatherApp.favouriteCities.FavouriteCitiesRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-14:08:26.815 INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkaygulen.akbankweatherApp.user.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-14:08:26.815 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 31 ms. Found 0 JDBC repository interfaces.
-14:08:26.826 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
-14:08:26.827 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-14:08:26.862 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 30 ms. Found 2 JPA repository interfaces.
-14:08:27.087 INFO  org.springframework.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=2a93cbe8-75c0-3b46-ab4d-f722f73e298d
-14:08:27.159 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'com.berkaygulen.akbankweatherApp.weatherAPI.WeatherAPI' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-14:08:27.655 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-14:08:27.663 INFO  org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
-14:08:27.664 INFO  org.apache.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.8]
-14:08:27.731 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-14:08:27.732 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1731 ms
-14:08:27.761 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-14:08:27.932 INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@10c2027c
-14:08:27.934 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-14:08:27.944 INFO  org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.logDataSources - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/akbank_weatherApp'
-14:08:28.058 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-14:08:28.111 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.2.2.Final
-14:08:28.113 INFO  org.hibernate.cfg.Environment.<clinit> - HHH000406: Using bytecode reflection optimizer
-14:08:28.247 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
-14:08:28.368 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
-14:08:28.420 INFO  org.hibernate.orm.dialect.logSelectedDialect - HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@2f2523e
-14:08:28.611 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
-14:08:29.208 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-14:08:29.255 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-14:08:29.832 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-14:08:29.933 INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
-14:08:31.026 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
-14:08:31.071 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarted - Started AkbankWeatherAppApplication in 5.576 seconds (process running for 6.243)
-14:08:36.720 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-14:08:36.720 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
-14:08:36.721 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
-14:08:36.888 ERROR com.berkaygulen.akbankweatherApp.auth.AuthControllerContractImpl.login - User with email: berkaygulen2@gmail.com not found
-14:08:36.916 WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.logException - Resolved [com.berkaygulen.akbankweatherApp.exceptions.UnauthorizedException]
-14:08:53.476 INFO  com.berkaygulen.akbankweatherApp.user.UserControllerContractImpl.save - User with id: 152 saved
-14:09:12.162 ERROR com.berkaygulen.akbankweatherApp.auth.AuthControllerContractImpl.login - Login request rejected. Password won't match. User: 152 with email: berkaygulen2@gmail.com
-14:09:12.163 WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.logException - Resolved [com.berkaygulen.akbankweatherApp.exceptions.UnauthorizedException]
-14:09:27.499 ERROR com.berkaygulen.akbankweatherApp.auth.AuthControllerContractImpl.login - User with email: berkaygulesdfgn2@gmail.com not found
-14:09:27.500 WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.logException - Resolved [com.berkaygulen.akbankweatherApp.exceptions.UnauthorizedException]
-14:09:40.897 INFO  com.berkaygulen.akbankweatherApp.auth.AuthControllerContractImpl.login - User: 152 logged in
-14:10:05.040 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-14:10:05.043 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-14:10:05.053 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
-19:18:48.385 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarting - Starting AkbankWeatherAppApplication using Java 19 with PID 20880 (C:\Users\berka\Desktop\akbank-weatherApp\target\classes started by berka in C:\Users\berka\Desktop\akbank-weatherApp)
-19:18:48.388 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
-19:18:48.529 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-19:18:48.531 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-19:18:49.916 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
-19:18:49.917 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-19:18:49.951 INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkaygulen.akbankweatherApp.favouriteCities.FavouriteCitiesRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-19:18:49.953 INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkaygulen.akbankweatherApp.user.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-19:18:49.954 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 31 ms. Found 0 JDBC repository interfaces.
-19:18:49.966 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
-19:18:49.967 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-19:18:50.015 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 43 ms. Found 2 JPA repository interfaces.
-19:18:50.248 INFO  org.springframework.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=2a93cbe8-75c0-3b46-ab4d-f722f73e298d
-19:18:50.316 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'com.berkaygulen.akbankweatherApp.weatherAPI.WeatherAPI' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-19:18:50.797 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-19:18:50.806 INFO  org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
-19:18:50.806 INFO  org.apache.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.8]
-19:18:50.874 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-19:18:50.874 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2342 ms
-19:18:50.905 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-19:18:51.074 INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7d9c58ff
-19:18:51.076 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-19:18:51.087 INFO  org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.logDataSources - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/akbank_weatherApp'
-19:18:51.198 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-19:18:51.251 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.2.2.Final
-19:18:51.253 INFO  org.hibernate.cfg.Environment.<clinit> - HHH000406: Using bytecode reflection optimizer
-19:18:51.522 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
-19:18:51.676 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
-19:18:51.736 INFO  org.hibernate.orm.dialect.logSelectedDialect - HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@3648d13c
-19:18:52.022 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
-19:18:52.691 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-19:18:52.745 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-19:18:53.372 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-19:18:53.472 INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
-19:18:54.584 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
-19:18:54.630 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarted - Started AkbankWeatherAppApplication in 7.199 seconds (process running for 8.951)
-19:19:46.798 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-19:19:46.798 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
-19:19:46.799 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
-19:19:47.332 INFO  org.springdoc.api.AbstractOpenApiResource.getOpenApi - Init duration for springdoc-openapi is: 290 ms
-19:20:09.186 WARN  com.berkaygulen.akbankweatherApp.user.UserControllerContractImpl.findById - User with id: 100 not found
-19:20:09.191 WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.logException - Resolved [com.berkaygulen.akbankweatherApp.exceptions.NotFoundException]
-19:20:29.219 WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.logException - Resolved [org.springframework.transaction.TransactionSystemException: Could not commit JPA transaction]
-19:20:53.385 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-19:20:53.388 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-19:20:53.396 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
-19:20:58.155 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarting - Starting AkbankWeatherAppApplication using Java 19 with PID 9660 (C:\Users\berka\Desktop\akbank-weatherApp\target\classes started by berka in C:\Users\berka\Desktop\akbank-weatherApp)
-19:20:58.158 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
-19:20:58.201 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-19:20:58.201 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-19:20:58.975 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
-19:20:58.976 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-19:20:59.001 INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkaygulen.akbankweatherApp.favouriteCities.FavouriteCitiesRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-19:20:59.002 INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkaygulen.akbankweatherApp.user.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-19:20:59.002 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 23 ms. Found 0 JDBC repository interfaces.
-19:20:59.012 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
-19:20:59.013 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-19:20:59.041 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 25 ms. Found 2 JPA repository interfaces.
-19:20:59.214 INFO  org.springframework.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=2a93cbe8-75c0-3b46-ab4d-f722f73e298d
-19:20:59.276 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'com.berkaygulen.akbankweatherApp.weatherAPI.WeatherAPI' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-19:20:59.711 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-19:20:59.720 INFO  org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
-19:20:59.720 INFO  org.apache.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.8]
-19:20:59.786 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-19:20:59.786 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1584 ms
-19:20:59.814 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-19:20:59.979 INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5a08223d
-19:20:59.981 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-19:20:59.989 INFO  org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.logDataSources - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/akbank_weatherApp'
-19:21:00.091 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-19:21:00.141 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.2.2.Final
-19:21:00.144 INFO  org.hibernate.cfg.Environment.<clinit> - HHH000406: Using bytecode reflection optimizer
-19:21:00.275 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
-19:21:00.396 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
-19:21:00.446 INFO  org.hibernate.orm.dialect.logSelectedDialect - HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@45f2e204
-19:21:00.639 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
-19:21:01.219 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-19:21:01.260 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-19:21:01.718 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-19:21:01.806 INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
-19:21:02.704 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
-19:21:02.748 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarted - Started AkbankWeatherAppApplication in 5.048 seconds (process running for 5.726)
-19:21:08.439 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-19:21:08.439 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
-19:21:08.440 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
-19:21:08.773 WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.logException - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in org.springframework.http.ResponseEntity<com.berkaygulen.akbankweatherApp.general.RestResponse<com.berkaygulen.akbankweatherApp.user.dto.UserDTO>> com.berkaygulen.akbankweatherApp.user.UserController.update(java.lang.Long,com.berkaygulen.akbankweatherApp.user.dto.UserUpdateRequestDTO) with 2 errors: [Field error in object 'userUpdateRequestDTO' on field 'email': rejected value [string]; codes [Email.userUpdateRequestDTO.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userUpdateRequestDTO.email,email]; arguments []; default message [email],[Ljakarta.validation.constraints.Pattern$Flag;@971e47,.*]; default message [must be a well-formed email address]] [Field error in object 'userUpdateRequestDTO' on field 'username': rejected value [string]; codes [UniqueUsername.userUpdateRequestDTO.username,UniqueUsername.username,UniqueUsername.java.lang.String,UniqueUsername]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userUpdateRequestDTO.username,username]; arguments []; default message [username]]; default message [Username must be Unique]] ]
-19:21:32.410 WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.logException - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in org.springframework.http.ResponseEntity<com.berkaygulen.akbankweatherApp.general.RestResponse<com.berkaygulen.akbankweatherApp.user.dto.UserDTO>> com.berkaygulen.akbankweatherApp.user.UserController.update(java.lang.Long,com.berkaygulen.akbankweatherApp.user.dto.UserUpdateRequestDTO): [Field error in object 'userUpdateRequestDTO' on field 'email': rejected value [string@gmail.com]; codes [UniqueEmail.userUpdateRequestDTO.email,UniqueEmail.email,UniqueEmail.java.lang.String,UniqueEmail]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userUpdateRequestDTO.email,email]; arguments []; default message [email]]; default message [Email must be Unique]] ]
-19:21:37.712 INFO  com.berkaygulen.akbankweatherApp.user.UserControllerContractImpl.updateCustomer - User with id: 102 updated. New values => com.berkaygulen.akbankweatherApp.user.User@e387969
-19:22:03.490 WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.logException - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in org.springframework.http.ResponseEntity<com.berkaygulen.akbankweatherApp.general.RestResponse<com.berkaygulen.akbankweatherApp.user.dto.UserDTO>> com.berkaygulen.akbankweatherApp.user.UserController.update(java.lang.Long,com.berkaygulen.akbankweatherApp.user.dto.UserUpdateRequestDTO) with 2 errors: [Field error in object 'userUpdateRequestDTO' on field 'email': rejected value [strisdfsdng@gmail.com]; codes [UniqueEmail.userUpdateRequestDTO.email,UniqueEmail.email,UniqueEmail.java.lang.String,UniqueEmail]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userUpdateRequestDTO.email,email]; arguments []; default message [email]]; default message [Email must be Unique]] [Field error in object 'userUpdateRequestDTO' on field 'username': rejected value [strasdfing]; codes [UniqueUsername.userUpdateRequestDTO.username,UniqueUsername.username,UniqueUsername.java.lang.String,UniqueUsername]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userUpdateRequestDTO.username,username]; arguments []; default message [username]]; default message [Username must be Unique]] ]
-19:22:16.451 WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.logException - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in org.springframework.http.ResponseEntity<com.berkaygulen.akbankweatherApp.general.RestResponse<com.berkaygulen.akbankweatherApp.user.dto.UserDTO>> com.berkaygulen.akbankweatherApp.user.UserController.update(java.lang.Long,com.berkaygulen.akbankweatherApp.user.dto.UserUpdateRequestDTO) with 2 errors: [Field error in object 'userUpdateRequestDTO' on field 'username': rejected value [strasdfing]; codes [UniqueUsername.userUpdateRequestDTO.username,UniqueUsername.username,UniqueUsername.java.lang.String,UniqueUsername]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userUpdateRequestDTO.username,username]; arguments []; default message [username]]; default message [Username must be Unique]] [Field error in object 'userUpdateRequestDTO' on field 'email': rejected value [strisdfsdng@gmail.com]; codes [UniqueEmail.userUpdateRequestDTO.email,UniqueEmail.email,UniqueEmail.java.lang.String,UniqueEmail]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userUpdateRequestDTO.email,email]; arguments []; default message [email]]; default message [Email must be Unique]] ]
-19:22:37.605 WARN  com.berkaygulen.akbankweatherApp.user.UserControllerContractImpl.updateCustomer - User with id: 1022 not found
-19:22:37.607 WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.logException - Resolved [com.berkaygulen.akbankweatherApp.exceptions.NotFoundException]
-19:22:48.005 WARN  com.berkaygulen.akbankweatherApp.user.UserControllerContractImpl.delete - User with id: 123 not found
-19:22:48.007 WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.logException - Resolved [com.berkaygulen.akbankweatherApp.exceptions.NotFoundException]
-19:23:25.678 WARN  com.berkaygulen.akbankweatherApp.user.UserControllerContractImpl.findAll - UserList is empty
-19:23:25.680 WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.logException - Resolved [com.berkaygulen.akbankweatherApp.exceptions.NotFoundException]
-19:23:29.843 WARN  com.berkaygulen.akbankweatherApp.user.UserControllerContractImpl.findAll - UserList is empty
-19:23:29.844 WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.logException - Resolved [com.berkaygulen.akbankweatherApp.exceptions.NotFoundException]
-19:23:33.875 WARN  com.berkaygulen.akbankweatherApp.user.UserControllerContractImpl.findAll - UserList is empty
-19:23:33.876 WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.logException - Resolved [com.berkaygulen.akbankweatherApp.exceptions.NotFoundException]
-19:33:13.113 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-19:33:13.116 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-19:33:13.119 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
-19:33:41.739 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarting - Starting AkbankWeatherAppApplication using Java 19 with PID 22924 (C:\Users\berka\Desktop\akbank-weatherApp\target\classes started by berka in C:\Users\berka\Desktop\akbank-weatherApp)
-19:33:41.741 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
-19:33:41.789 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-19:33:41.789 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-19:33:42.671 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
-19:33:42.672 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-19:33:42.698 INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkaygulen.akbankweatherApp.favouriteCities.FavouriteCitiesRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-19:33:42.699 INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkaygulen.akbankweatherApp.user.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-19:33:42.699 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 24 ms. Found 0 JDBC repository interfaces.
-19:33:42.712 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
-19:33:42.713 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-19:33:42.745 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 29 ms. Found 2 JPA repository interfaces.
-19:33:42.959 INFO  org.springframework.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=2a93cbe8-75c0-3b46-ab4d-f722f73e298d
-19:33:43.023 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'com.berkaygulen.akbankweatherApp.weatherAPI.WeatherAPI' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-19:33:43.513 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-19:33:43.521 INFO  org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
-19:33:43.521 INFO  org.apache.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.8]
-19:33:43.582 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-19:33:43.582 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1792 ms
-19:33:43.609 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-19:33:43.774 INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@24c01deb
-19:33:43.775 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-19:33:43.783 INFO  org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.logDataSources - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/akbank_weatherApp'
-19:33:43.882 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-19:33:43.934 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.2.2.Final
-19:33:43.936 INFO  org.hibernate.cfg.Environment.<clinit> - HHH000406: Using bytecode reflection optimizer
-19:33:44.066 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
-19:33:44.188 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
-19:33:44.245 INFO  org.hibernate.orm.dialect.logSelectedDialect - HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@4b0300b6
-19:33:44.436 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
-19:33:45.022 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-19:33:45.063 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-19:33:45.523 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-19:33:45.617 INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
-19:33:46.565 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
-19:33:46.610 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarted - Started AkbankWeatherAppApplication in 5.352 seconds (process running for 6.03)
-19:33:49.705 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-19:33:49.709 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-19:33:49.714 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
-19:47:19.163 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarting - Starting AkbankWeatherAppApplication using Java 19 with PID 16392 (C:\Users\berka\Desktop\akbank-weatherApp\target\classes started by berka in C:\Users\berka\Desktop\akbank-weatherApp)
-19:47:19.166 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
-19:47:19.214 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-19:47:19.215 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-19:47:20.073 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
-19:47:20.075 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-19:47:20.106 INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkaygulen.akbankweatherApp.favouriteCities.FavouriteCitiesRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-19:47:20.107 INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkaygulen.akbankweatherApp.user.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-19:47:20.108 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 28 ms. Found 0 JDBC repository interfaces.
-19:47:20.121 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
-19:47:20.123 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-19:47:20.179 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 48 ms. Found 2 JPA repository interfaces.
-19:47:20.673 INFO  org.springframework.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=2a93cbe8-75c0-3b46-ab4d-f722f73e298d
-19:47:20.829 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'com.berkaygulen.akbankweatherApp.weatherAPI.WeatherAPI' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-19:47:22.033 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-19:47:22.047 INFO  org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
-19:47:22.048 INFO  org.apache.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.8]
-19:47:22.162 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-19:47:22.163 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2948 ms
-19:47:22.209 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-19:47:22.574 INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5a08223d
-19:47:22.576 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-19:47:22.588 INFO  org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.logDataSources - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/akbank_weatherApp'
-19:47:22.938 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-19:47:23.027 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.2.2.Final
-19:47:23.030 INFO  org.hibernate.cfg.Environment.<clinit> - HHH000406: Using bytecode reflection optimizer
-19:47:23.193 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
-19:47:23.317 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
-19:47:23.371 INFO  org.hibernate.orm.dialect.logSelectedDialect - HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@5d80489d
-19:47:23.563 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
-19:47:24.183 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-19:47:24.227 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-19:47:24.729 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-19:47:24.825 INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
-19:47:25.820 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
-19:47:25.865 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarted - Started AkbankWeatherAppApplication in 7.218 seconds (process running for 7.881)
-19:47:44.324 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-19:47:44.324 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
-19:47:44.326 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 2 ms
-19:47:44.713 INFO  com.berkaygulen.akbankweatherApp.user.UserControllerContractImpl.save - User with id: 202 saved
-19:48:03.173 INFO  org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener.onApplicationEvent - Restarting due to 54 class path changes (0 additions, 53 deletions, 1 modification)
-19:48:03.183 INFO  org.apache.catalina.core.StandardService.log - Stopping service [Tomcat]
-19:48:03.185 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Destroying Spring FrameworkServlet 'dispatcherServlet'
-19:48:03.192 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-19:48:03.195 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-19:48:03.200 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
-19:48:03.330 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarting - Starting AkbankWeatherAppApplication using Java 19 with PID 16392 (C:\Users\berka\Desktop\akbank-weatherApp\target\classes started by berka in C:\Users\berka\Desktop\akbank-weatherApp)
-19:48:03.330 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
-19:48:03.678 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
-19:48:03.678 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-19:48:03.679 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 0 ms. Found 0 JDBC repository interfaces.
-19:48:03.683 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
-19:48:03.683 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-19:48:03.684 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
-19:48:03.746 INFO  org.springframework.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=a389cd43-d50e-37cb-8a7a-73e020c4d409
-19:48:03.823 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-19:48:03.823 INFO  org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
-19:48:03.823 INFO  org.apache.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.8]
-19:48:03.852 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-19:48:03.853 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 520 ms
-19:48:03.870 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-2 - Starting...
-19:48:03.944 INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@3d1562e4
-19:48:03.945 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-2 - Start completed.
-19:48:03.946 INFO  org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.logDataSources - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/akbank_weatherApp'
-19:48:03.973 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-19:48:03.982 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
-19:48:03.982 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
-19:48:03.989 INFO  org.hibernate.orm.dialect.logSelectedDialect - HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@58c698c6
-19:48:03.994 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
-19:48:04.000 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-19:48:04.000 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-19:48:04.051 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-19:48:04.609 INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
-19:48:04.690 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
-19:48:04.736 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarted - Started AkbankWeatherAppApplication in 1.477 seconds (process running for 46.752)
-19:48:04.738 INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener.onApplicationEvent - Condition evaluation unchanged
-19:48:07.079 INFO  org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener.onApplicationEvent - Restarting due to 53 class path changes (53 additions, 0 deletions, 0 modifications)
-19:48:07.087 INFO  org.apache.catalina.core.StandardService.log - Stopping service [Tomcat]
-19:48:07.092 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-19:48:07.093 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-2 - Shutdown initiated...
-19:48:07.096 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-2 - Shutdown completed.
-19:48:07.231 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarting - Starting AkbankWeatherAppApplication using Java 19 with PID 16392 (C:\Users\berka\Desktop\akbank-weatherApp\target\classes started by berka in C:\Users\berka\Desktop\akbank-weatherApp)
-19:48:07.232 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
-19:48:07.931 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
-19:48:07.931 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-19:48:07.938 INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkaygulen.akbankweatherApp.favouriteCities.FavouriteCitiesRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-19:48:07.939 INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkaygulen.akbankweatherApp.user.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-19:48:07.939 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 8 ms. Found 0 JDBC repository interfaces.
-19:48:07.942 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
-19:48:07.942 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-19:48:07.953 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 10 ms. Found 2 JPA repository interfaces.
-19:48:07.993 INFO  org.springframework.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=2a93cbe8-75c0-3b46-ab4d-f722f73e298d
-19:48:08.006 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'com.berkaygulen.akbankweatherApp.weatherAPI.WeatherAPI' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-19:48:08.054 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-19:48:08.055 INFO  org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
-19:48:08.055 INFO  org.apache.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.8]
-19:48:08.082 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-19:48:08.082 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 844 ms
-19:48:08.099 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-3 - Starting...
-19:48:08.265 INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@79d42f40
-19:48:08.265 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-3 - Start completed.
-19:48:08.265 INFO  org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.logDataSources - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/akbank_weatherApp'
-19:48:08.286 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-19:48:08.291 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
-19:48:08.292 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
-19:48:08.300 INFO  org.hibernate.orm.dialect.logSelectedDialect - HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@32ec1874
-19:48:08.319 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
-19:48:08.353 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-19:48:08.371 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-19:48:08.520 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-19:48:08.560 INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
-19:48:09.163 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
-19:48:09.208 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarted - Started AkbankWeatherAppApplication in 2.058 seconds (process running for 51.224)
-19:48:09.209 INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener.onApplicationEvent - Condition evaluation unchanged
-19:50:04.081 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-19:50:04.082 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-3 - Shutdown initiated...
-19:50:04.083 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-3 - Shutdown completed.
-20:53:18.653 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarting - Starting AkbankWeatherAppApplication using Java 19 with PID 1464 (C:\Users\berka\Desktop\akbank-weatherApp\target\classes started by berka in C:\Users\berka\Desktop\akbank-weatherApp)
-20:53:18.656 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
-20:53:18.717 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-20:53:18.718 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-20:53:19.498 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
-20:53:19.499 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-20:53:19.526 INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkaygulen.akbankweatherApp.favouriteCities.FavouriteCitiesRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-20:53:19.527 INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkaygulen.akbankweatherApp.user.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-20:53:19.527 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 24 ms. Found 0 JDBC repository interfaces.
-20:53:19.537 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
-20:53:19.538 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-20:53:19.568 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 26 ms. Found 2 JPA repository interfaces.
-20:53:19.752 INFO  org.springframework.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=2a93cbe8-75c0-3b46-ab4d-f722f73e298d
-20:53:19.816 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'com.berkaygulen.akbankweatherApp.weatherAPI.WeatherAPI' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-20:53:20.250 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-20:53:20.259 INFO  org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
-20:53:20.259 INFO  org.apache.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.8]
-20:53:20.327 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-20:53:20.328 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1608 ms
-20:53:20.357 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-20:53:20.549 INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@10c2027c
-20:53:20.551 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-20:53:20.562 INFO  org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.logDataSources - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/akbank_weatherApp'
-20:53:20.687 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-20:53:20.747 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.2.2.Final
-20:53:20.750 INFO  org.hibernate.cfg.Environment.<clinit> - HHH000406: Using bytecode reflection optimizer
-20:53:20.899 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
-20:53:21.030 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
-20:53:21.081 INFO  org.hibernate.orm.dialect.logSelectedDialect - HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@2f2523e
-20:53:21.304 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
-20:53:21.952 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-20:53:21.992 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-20:53:22.510 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-20:53:22.624 INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
-20:53:23.639 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
-20:53:23.684 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarted - Started AkbankWeatherAppApplication in 5.603 seconds (process running for 6.329)
-20:53:32.199 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-20:53:32.200 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
-20:53:32.201 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
-20:54:17.269 WARN  com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56s609ms208µs900ns).
-20:54:17.272 WARN  com.berkaygulen.akbankweatherApp.user.UserControllerContractImpl.findById - User with id: 100 not found
-20:54:17.327 WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.logException - Resolved [com.berkaygulen.akbankweatherApp.exceptions.NotFoundException]
-20:54:19.169 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-20:54:19.172 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-20:54:19.175 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+02:15:55.450 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarting - Starting AkbankWeatherAppApplication using Java 19 with PID 6352 (C:\Users\berka\Desktop\akbank-weatherApp\target\classes started by berka in C:\Users\berka\Desktop\akbank-weatherApp)
+02:15:55.458 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+02:15:55.507 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+02:15:55.507 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+02:15:56.641 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+02:15:56.643 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+02:15:56.668 INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkaygulen.akbankweatherApp.favouriteCities.FavouriteCitiesRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+02:15:56.669 INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkaygulen.akbankweatherApp.user.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+02:15:56.670 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 24 ms. Found 0 JDBC repository interfaces.
+02:15:56.679 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+02:15:56.680 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+02:15:56.711 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 28 ms. Found 2 JPA repository interfaces.
+02:15:56.931 INFO  org.springframework.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=06911560-8c51-3643-8761-d3d88add7970
+02:15:57.018 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'com.berkaygulen.akbankweatherApp.weatherAPI.WeatherAPI' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+02:15:57.497 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+02:15:57.508 INFO  org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
+02:15:57.509 INFO  org.apache.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.8]
+02:15:57.584 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+02:15:57.584 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2076 ms
+02:15:57.620 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+02:15:57.808 INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:d7a7e721-7689-471e-88b8-6b27f35b40cc user=SA
+02:15:57.810 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+02:15:57.820 INFO  org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.logDataSources - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:d7a7e721-7689-471e-88b8-6b27f35b40cc'
+02:15:57.958 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+02:15:58.020 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.2.2.Final
+02:15:58.023 INFO  org.hibernate.cfg.Environment.<clinit> - HHH000406: Using bytecode reflection optimizer
+02:15:58.218 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
+02:15:58.388 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+02:15:58.446 INFO  org.hibernate.orm.dialect.logSelectedDialect - HHH035001: Using dialect: org.hibernate.dialect.H2Dialect, version: 2.1.214
+02:15:58.668 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
+02:15:59.461 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+02:15:59.517 INFO  org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.beforeScript - HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
+02:15:59.521 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+02:16:00.404 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+02:16:00.517 INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+02:16:01.528 WARN  org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration.getOrDeducePassword - 
+
+Using generated security password: dae6b9cf-151d-4b8f-880f-116e836b8d3c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+02:16:01.720 INFO  org.springframework.security.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@48f1a3b9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c292516, org.springframework.security.web.context.SecurityContextHolderFilter@60e697f1, org.springframework.security.web.header.HeaderWriterFilter@56839ecc, org.springframework.security.web.csrf.CsrfFilter@7139a93f, org.springframework.security.web.authentication.logout.LogoutFilter@43aa8d07, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5d62f302, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@13bc0889, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6e87f04e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@a53d3f2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2f2bfaba, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e6f29a3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@783c10c, org.springframework.security.web.access.ExceptionTranslationFilter@5d19a73a, org.springframework.security.web.access.intercept.AuthorizationFilter@54699f7e]
+02:16:01.933 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+02:16:01.984 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarted - Started AkbankWeatherAppApplication in 6.997 seconds (process running for 10.35)
+02:16:03.640 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+02:16:03.640 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+02:16:03.642 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+02:16:21.579 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+02:16:21.579 INFO  org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+02:16:21.792 WARN  org.springframework.beans.factory.support.DisposableBeanAdapter.destroy - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+02:16:21.793 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+02:16:21.794 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+02:16:26.358 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarting - Starting AkbankWeatherAppApplication using Java 19 with PID 22816 (C:\Users\berka\Desktop\akbank-weatherApp\target\classes started by berka in C:\Users\berka\Desktop\akbank-weatherApp)
+02:16:26.361 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+02:16:26.415 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+02:16:26.416 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+02:16:27.179 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+02:16:27.180 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+02:16:27.208 INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkaygulen.akbankweatherApp.favouriteCities.FavouriteCitiesRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+02:16:27.208 INFO  org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.berkaygulen.akbankweatherApp.user.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+02:16:27.209 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 24 ms. Found 0 JDBC repository interfaces.
+02:16:27.218 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+02:16:27.219 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+02:16:27.249 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 26 ms. Found 2 JPA repository interfaces.
+02:16:27.430 INFO  org.springframework.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=2a93cbe8-75c0-3b46-ab4d-f722f73e298d
+02:16:27.491 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'com.berkaygulen.akbankweatherApp.weatherAPI.WeatherAPI' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+02:16:27.944 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+02:16:27.953 INFO  org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
+02:16:27.953 INFO  org.apache.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.8]
+02:16:28.010 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+02:16:28.010 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1594 ms
+02:16:28.036 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+02:16:28.214 INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ef9dcc8a-eee1-4bd2-afdc-ab03b832bf89 user=SA
+02:16:28.216 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+02:16:28.224 INFO  org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.logDataSources - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ef9dcc8a-eee1-4bd2-afdc-ab03b832bf89'
+02:16:28.356 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+02:16:28.409 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.2.2.Final
+02:16:28.412 INFO  org.hibernate.cfg.Environment.<clinit> - HHH000406: Using bytecode reflection optimizer
+02:16:28.536 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
+02:16:28.654 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+02:16:28.694 INFO  org.hibernate.orm.dialect.logSelectedDialect - HHH035001: Using dialect: org.hibernate.dialect.H2Dialect, version: 2.1.214
+02:16:28.889 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
+02:16:29.498 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+02:16:29.532 INFO  org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.beforeScript - HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
+02:16:29.536 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+02:16:30.072 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+02:16:30.162 INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+02:16:31.090 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+02:16:31.133 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarted - Started AkbankWeatherAppApplication in 5.219 seconds (process running for 5.894)
+02:16:35.946 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+02:16:35.946 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+02:16:35.948 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 2 ms
+02:16:51.201 INFO  org.springdoc.api.AbstractOpenApiResource.getOpenApi - Init duration for springdoc-openapi is: 267 ms
+02:17:11.812 WARN  com.berkaygulen.akbankweatherApp.user.UserControllerContractImpl.findAll - UserList is empty
+02:17:11.817 WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.logException - Resolved [com.berkaygulen.akbankweatherApp.exceptions.NotFoundException]
+02:17:19.410 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+02:17:19.410 INFO  org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+02:17:19.628 WARN  org.springframework.beans.factory.support.DisposableBeanAdapter.destroy - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+02:17:19.628 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+02:17:19.630 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+03:32:03.159 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarting - Starting AkbankWeatherAppApplication using Java 19 with PID 19880 (C:\Users\berka\Desktop\akbank-weatherApp\target\classes started by berka in C:\Users\berka\Desktop\akbank-weatherApp)
+03:32:03.162 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+03:32:03.207 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+03:32:03.208 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+03:32:04.023 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+03:32:04.079 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 49 ms. Found 2 JPA repository interfaces.
+03:32:04.284 INFO  org.springframework.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=ef5469c4-76b3-31b8-ab36-ff3a90067634
+03:32:04.352 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'com.berkaygulen.akbankweatherApp.weatherAPI.WeatherAPI' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+03:32:04.814 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+03:32:04.823 INFO  org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
+03:32:04.823 INFO  org.apache.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.8]
+03:32:04.883 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+03:32:04.884 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1674 ms
+03:32:04.913 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+03:32:05.082 INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:2bf91833-de94-465b-96b8-b985df1e3335 user=SA
+03:32:05.084 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+03:32:05.093 INFO  org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.logDataSources - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:2bf91833-de94-465b-96b8-b985df1e3335'
+03:32:05.203 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+03:32:05.249 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.2.2.Final
+03:32:05.251 INFO  org.hibernate.cfg.Environment.<clinit> - HHH000406: Using bytecode reflection optimizer
+03:32:05.375 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
+03:32:05.495 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+03:32:05.543 INFO  org.hibernate.orm.dialect.logSelectedDialect - HHH035001: Using dialect: org.hibernate.dialect.H2Dialect, version: 2.1.214
+03:32:05.729 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
+03:32:06.309 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+03:32:06.353 INFO  org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.beforeScript - HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
+03:32:06.356 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+03:32:06.918 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+03:32:07.030 INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+03:32:07.965 WARN  org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration.getOrDeducePassword - 
+
+Using generated security password: 736226f8-f9e6-4ba2-995f-b5bb7d7d95b4
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+03:32:08.067 INFO  org.springframework.security.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@10b5d729, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@24e074b8, org.springframework.security.web.context.SecurityContextHolderFilter@457ea5a, org.springframework.security.web.header.HeaderWriterFilter@1972a868, org.springframework.security.web.csrf.CsrfFilter@59fb891b, org.springframework.security.web.authentication.logout.LogoutFilter@698103ee, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3eb18af9, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4daa7d2c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@3ffb8578, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@ba7e8d7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6e5ae048, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@17f1e08, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@738c5027, org.springframework.security.web.access.ExceptionTranslationFilter@340d706b, org.springframework.security.web.access.intercept.AuthorizationFilter@53e4b04f]
+03:32:08.241 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+03:32:08.286 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarted - Started AkbankWeatherAppApplication in 5.607 seconds (process running for 6.318)
+03:32:10.751 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+03:32:10.752 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+03:32:10.753 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+03:32:49.612 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+03:32:49.613 INFO  org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+03:32:49.828 WARN  org.springframework.beans.factory.support.DisposableBeanAdapter.destroy - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+03:32:49.829 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+03:32:49.830 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+03:33:20.577 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarting - Starting AkbankWeatherAppApplication using Java 19 with PID 7800 (C:\Users\berka\Desktop\akbank-weatherApp\target\classes started by berka in C:\Users\berka\Desktop\akbank-weatherApp)
+03:33:20.580 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+03:33:20.623 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+03:33:20.623 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+03:33:21.417 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+03:33:21.478 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 52 ms. Found 2 JPA repository interfaces.
+03:33:21.718 INFO  org.springframework.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=ef5469c4-76b3-31b8-ab36-ff3a90067634
+03:33:21.798 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'com.berkaygulen.akbankweatherApp.weatherAPI.WeatherAPI' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+03:33:22.272 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+03:33:22.279 INFO  org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
+03:33:22.281 INFO  org.apache.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.8]
+03:33:22.344 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+03:33:22.344 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1720 ms
+03:33:22.369 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+03:33:22.549 INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:75e414d0-0b1e-4b91-88fc-525ce0f27bbe user=SA
+03:33:22.552 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+03:33:22.563 INFO  org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.logDataSources - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:75e414d0-0b1e-4b91-88fc-525ce0f27bbe'
+03:33:22.703 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+03:33:22.761 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.2.2.Final
+03:33:22.763 INFO  org.hibernate.cfg.Environment.<clinit> - HHH000406: Using bytecode reflection optimizer
+03:33:22.905 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
+03:33:23.014 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+03:33:23.052 INFO  org.hibernate.orm.dialect.logSelectedDialect - HHH035001: Using dialect: org.hibernate.dialect.H2Dialect, version: 2.1.214
+03:33:23.248 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
+03:33:23.858 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+03:33:23.897 INFO  org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.beforeScript - HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
+03:33:23.899 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+03:33:24.437 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+03:33:24.527 INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+03:33:25.268 WARN  org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration.getOrDeducePassword - 
+
+Using generated security password: 2d1820ef-51bd-42a2-b206-eff6c9dcd4f0
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+03:33:25.362 INFO  org.springframework.security.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@8f35918, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7df1eaa6, org.springframework.security.web.context.SecurityContextHolderFilter@4b7d8e65, org.springframework.security.web.header.HeaderWriterFilter@1fcae7d5, org.springframework.security.web.csrf.CsrfFilter@4a151caf, org.springframework.security.web.authentication.logout.LogoutFilter@129114c8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5405885f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4011d67f, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@642dac78, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@36986de5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@386544e7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1af2869d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6af8644d, org.springframework.security.web.access.ExceptionTranslationFilter@1dc0d783, org.springframework.security.web.access.intercept.AuthorizationFilter@5108a522]
+03:33:25.507 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+03:33:25.552 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarted - Started AkbankWeatherAppApplication in 5.439 seconds (process running for 6.12)
+03:33:30.271 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+03:33:30.271 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+03:33:30.272 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+03:33:46.766 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+03:33:46.767 INFO  org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+03:33:46.987 WARN  org.springframework.beans.factory.support.DisposableBeanAdapter.destroy - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+03:33:46.988 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+03:33:46.989 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+03:33:53.867 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarting - Starting AkbankWeatherAppApplication using Java 19 with PID 20080 (C:\Users\berka\Desktop\akbank-weatherApp\target\classes started by berka in C:\Users\berka\Desktop\akbank-weatherApp)
+03:33:53.870 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+03:33:53.921 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+03:33:53.921 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+03:33:54.712 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+03:33:54.770 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 51 ms. Found 2 JPA repository interfaces.
+03:33:54.953 INFO  org.springframework.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=84d603c5-88ce-30d7-b05a-634884205783
+03:33:55.014 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'com.berkaygulen.akbankweatherApp.weatherAPI.WeatherAPI' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+03:33:55.464 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+03:33:55.472 INFO  org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
+03:33:55.472 INFO  org.apache.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.8]
+03:33:55.530 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+03:33:55.530 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1608 ms
+03:33:55.555 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+03:33:55.724 INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:14aaee0c-4989-4718-9797-fc54e7f4a165 user=SA
+03:33:55.726 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+03:33:55.735 INFO  org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.logDataSources - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:14aaee0c-4989-4718-9797-fc54e7f4a165'
+03:33:55.842 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+03:33:55.892 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.2.2.Final
+03:33:55.894 INFO  org.hibernate.cfg.Environment.<clinit> - HHH000406: Using bytecode reflection optimizer
+03:33:56.016 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
+03:33:56.126 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+03:33:56.172 INFO  org.hibernate.orm.dialect.logSelectedDialect - HHH035001: Using dialect: org.hibernate.dialect.H2Dialect, version: 2.1.214
+03:33:56.364 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
+03:33:56.955 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+03:33:56.991 INFO  org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.beforeScript - HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
+03:33:56.997 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+03:33:57.542 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+03:33:57.627 INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+03:33:58.477 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+03:33:58.518 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarted - Started AkbankWeatherAppApplication in 5.111 seconds (process running for 5.992)
+03:34:02.287 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+03:34:02.287 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+03:34:02.289 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 2 ms
+03:34:08.720 INFO  org.springdoc.api.AbstractOpenApiResource.getOpenApi - Init duration for springdoc-openapi is: 335 ms
+03:35:07.256 WARN  com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m11s416ms680µs599ns).
+03:35:08.029 WARN  com.berkaygulen.akbankweatherApp.user.UserControllerContractImpl.findAll - UserList is empty
+03:35:08.036 WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.logException - Resolved [com.berkaygulen.akbankweatherApp.exceptions.NotFoundException]
+03:35:08.733 INFO  com.berkaygulen.akbankweatherApp.user.UserControllerContractImpl.save - User with id: 1 saved
+03:37:03.814 WARN  com.berkaygulen.akbankweatherApp.user.UserControllerContractImpl.findById - User with id: 202 not found
+03:37:03.815 WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.logException - Resolved [com.berkaygulen.akbankweatherApp.exceptions.NotFoundException]
+03:40:46.051 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+03:40:46.052 INFO  org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+03:40:46.272 WARN  org.springframework.beans.factory.support.DisposableBeanAdapter.destroy - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+03:40:46.273 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+03:40:46.274 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+03:40:48.404 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarting - Starting AkbankWeatherAppApplication using Java 19 with PID 19968 (C:\Users\berka\Desktop\akbank-weatherApp\target\classes started by berka in C:\Users\berka\Desktop\akbank-weatherApp)
+03:40:48.407 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+03:40:48.448 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+03:40:48.449 INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+03:40:49.247 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+03:40:49.301 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 46 ms. Found 2 JPA repository interfaces.
+03:40:49.488 INFO  org.springframework.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=84d603c5-88ce-30d7-b05a-634884205783
+03:40:49.546 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'com.berkaygulen.akbankweatherApp.weatherAPI.WeatherAPI' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+03:40:49.992 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+03:40:50.000 INFO  org.apache.catalina.core.StandardService.log - Starting service [Tomcat]
+03:40:50.000 INFO  org.apache.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.8]
+03:40:50.055 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+03:40:50.055 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1605 ms
+03:40:50.081 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+03:40:50.248 INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@b454e22
+03:40:50.250 INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+03:40:50.259 INFO  org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.logDataSources - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/akbank_weatherApp'
+03:40:50.356 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+03:40:50.408 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.2.2.Final
+03:40:50.410 INFO  org.hibernate.cfg.Environment.<clinit> - HHH000406: Using bytecode reflection optimizer
+03:40:50.536 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
+03:40:50.655 INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+03:40:50.705 INFO  org.hibernate.orm.dialect.logSelectedDialect - HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@5a0c8471
+03:40:50.898 INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator.buildBytecodeProvider - HHH000021: Bytecode provider name : bytebuddy
+03:40:51.478 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+03:40:51.519 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+03:40:52.067 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+03:40:52.165 INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+03:40:53.013 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+03:40:53.056 INFO  com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication.logStarted - Started AkbankWeatherAppApplication in 5.109 seconds (process running for 5.787)
+03:40:55.898 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+03:40:55.898 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+03:40:55.899 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+03:40:56.498 INFO  org.springdoc.api.AbstractOpenApiResource.getOpenApi - Init duration for springdoc-openapi is: 352 ms
+03:41:40.557 INFO  com.berkaygulen.akbankweatherApp.user.UserControllerContractImpl.save - User with id: 252 saved
+03:42:20.847 INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+03:42:20.850 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+03:42:20.852 INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.

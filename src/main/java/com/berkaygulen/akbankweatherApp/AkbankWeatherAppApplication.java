@@ -5,8 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
-@SpringBootApplication(exclude = SecurityAutoConfiguration.class)
+//@SpringBootApplication(exclude = SecurityAutoConfiguration.class)
 @EnableFeignClients
+@SpringBootApplication
+
 public class AkbankWeatherAppApplication {
 
 	public static void main(String[] args) {

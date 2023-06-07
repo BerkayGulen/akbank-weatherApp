@@ -11,6 +11,8 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,8 +20,6 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-@Getter
-@Setter
 @RequiredArgsConstructor
 @Slf4j
 public class FavouriteCitiesControllerContractImpl implements FavouriteCitiesControllerContract {
@@ -94,6 +94,7 @@ public class FavouriteCitiesControllerContractImpl implements FavouriteCitiesCon
         FavouriteCities byUserIdAndCityName = favouriteCitiesEntityService.findByUserIdAndCityName(favouriteCitiesSaveOrDeleteRequestDTO);
         log.info("{} deleted on User: {} favoutrites",cityName,userId);
         favouriteCitiesEntityService.delete(byUserIdAndCityName);
+
     }
 
     private boolean isUserNotExists(Long userId) {
