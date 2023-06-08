@@ -25,3 +25,15 @@
 #### I created a test database on PostgreSQL for my tests. I added my connection properties under the test folder in the application.properties file. Also, I added scheme.sql and data.sql for adding dummy data for tests. I have tried to cover every controller and business layer methods while I am testing.
 ![image](https://github.com/BerkayGulen/akbank-weatherApp/assets/76843587/568d472a-6f48-417d-9d56-5f3f30ff12e5)
 
+## User Interface
+### Login Page
+![image](https://github.com/BerkayGulen/akbank-weatherApp/assets/76843587/08e2889b-898f-4775-9e6f-725cefa443e0)
+### Sign Up Page
+![image](https://github.com/BerkayGulen/akbank-weatherApp/assets/76843587/a5eb4899-f62d-4b2d-9543-83b907454046)
+### Home Page for Weather Forecast
+![image](https://github.com/BerkayGulen/akbank-weatherApp/assets/76843587/9718641a-db5b-47a5-b0c6-8e9649a9869f)
+![image](https://github.com/BerkayGulen/akbank-weatherApp/assets/76843587/24b7fdc7-5f20-49ad-8753-8a626eee2182)
+
+
+
+
