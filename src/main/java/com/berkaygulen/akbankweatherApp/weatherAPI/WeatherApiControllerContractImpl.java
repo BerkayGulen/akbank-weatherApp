@@ -35,7 +35,7 @@ public class WeatherApiControllerContractImpl implements WeatherApiControllerCon
         if (cityDTOList.size() > 0) {
             String name = cityDTOList.get(0).name();
             if (!cityName.equalsIgnoreCase(name)) {
-                log.error("City name {} and {} wont match",cityName,name);
+                log.warn("City name {} and {} wont match",cityName,name);
                 throw new NotFoundException(WeatherApiErrorMessages.CITY_NOT_FOUND);
             }
         } else {
@@ -45,7 +45,7 @@ public class WeatherApiControllerContractImpl implements WeatherApiControllerCon
         CityDTO cityDTO = cityDTOList.get(0);
         WeatherForecastDTO weatherForecastDTO = weatherClient.getWeatherForecast(cityDTO.lat(), cityDTO.lon(), apikey);
         if (weatherForecastDTO == null){
-            log.error("Weather forecast is null");
+            log.warn("Weather forecast is null");
             throw new NotFoundException(WeatherApiErrorMessages.CITY_NOT_FOUND);
 
         }

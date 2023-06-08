@@ -35,12 +35,12 @@ public class FavouriteCitiesControllerContractImpl implements FavouriteCitiesCon
         FavouriteCities favouriteCities = null;
 
         if (isUserNotExists(userId)) {
-            log.error("user: {} not found", userId);
+            log.warn("user: {} not found", userId);
             throw new NotFoundException(UserErrorMessages.USER_NOT_FOUND);
 
         }
         if (isUserHasThisCity(userId, cityName)) {
-            log.error("User: {} already has {} on his/her favorites",userId,cityName);
+            log.warn("User: {} already has {} on his/her favorites",userId,cityName);
             throw new BusinessException(UserErrorMessages.USER_HAS_THIS_CITY);
         }
 
@@ -56,13 +56,13 @@ public class FavouriteCitiesControllerContractImpl implements FavouriteCitiesCon
     public List<FavouriteCitiesDTO> getAll(Long userId) {
         List<FavouriteCities> favouriteCitiesByUserId = null;
         if (isUserNotExists(userId)) {
-            log.error("user: {} not found", userId);
+            log.warn("user: {} not found", userId);
             throw new NotFoundException(UserErrorMessages.USER_NOT_FOUND);
         }
 
         favouriteCitiesByUserId = favouriteCitiesEntityService.findFavouriteCitiesByUserId(userId);
         if (favouriteCitiesByUserId.isEmpty()) {
-            log.error("user: {} favourites empty so couldn't fetched",userId);
+            log.warn("user: {} favourites empty so couldn't fetched",userId);
             throw new BusinessException(UserErrorMessages.USER_HAS_NO_FAVOURITES);
         }
 
@@ -82,12 +82,12 @@ public class FavouriteCitiesControllerContractImpl implements FavouriteCitiesCon
         String cityName = favouriteCitiesSaveOrDeleteRequestDTO.cityName();
 
         if (isUserNotExists(userId)) {
-            log.error("user: {} not found", userId);
+            log.warn("user: {} not found", userId);
             throw new NotFoundException(UserErrorMessages.USER_NOT_FOUND);
         }
 
         if (!isUserHasThisCity(userId, cityName)) {
-            log.error("User: {} doesn't have {} on his/her favourites",userId,cityName);
+            log.warn("User: {} doesn't have {} on his/her favourites",userId,cityName);
             throw new BusinessException(UserErrorMessages.USER_HAS_NOT_HAVE_THIS_CITY);
         }
 

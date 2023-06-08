@@ -1,12 +1,11 @@
-package com.berkaygulen.akbankweatherApp.user;
+package com.berkaygulen.akbankweatherApp.favouriteCities;
 
 import com.berkaygulen.akbankweatherApp.AkbankWeatherAppApplication;
 import com.berkaygulen.akbankweatherApp.BaseTest;
+import com.berkaygulen.akbankweatherApp.favouriteCities.dto.FavouriteCitiesSaveOrDeleteRequestDTO;
 import com.berkaygulen.akbankweatherApp.user.dto.UserSaveRequestDTO;
-import com.berkaygulen.akbankweatherApp.user.dto.UserUpdateRequestDTO;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import java.time.LocalDate;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -25,9 +24,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(MockitoExtension.class)
 @SpringBootTest(classes = {AkbankWeatherAppApplication.class})
-class UserControllerTest extends BaseTest {
-
-    private static final String BASE_PATH = "/api/v1/users";
+class FavouriteCitiesControllerTest extends BaseTest {
+    private static final String BASE_PATH = "/api/v1/favourites";
 
     @Autowired
     private WebApplicationContext context;
@@ -39,13 +37,11 @@ class UserControllerTest extends BaseTest {
         mockMvc = MockMvcBuilders.webAppContextSetup(this.context).build();
         objectMapper = new ObjectMapper().registerModule(new JavaTimeModule());
     }
-
     @Test
     void shouldSave() throws Exception {
-        UserSaveRequestDTO userSaveRequestDTO =
-                new UserSaveRequestDTO("berkay","gulen","berkay","berkay1@gmail.com","1231234");
+        FavouriteCitiesSaveOrDeleteRequestDTO request = new FavouriteCitiesSaveOrDeleteRequestDTO(1003L,"Istanbul");
 
-        String body = objectMapper.writeValueAsString(userSaveRequestDTO);
+        String body = objectMapper.writeValueAsString(request);
 
         MvcResult mvcResult = mockMvc.perform(
                         MockMvcRequestBuilders.post(BASE_PATH)
@@ -57,24 +53,10 @@ class UserControllerTest extends BaseTest {
         boolean success = isSuccess(mvcResult);
 
         assertTrue(success);
-
     }
 
     @Test
-    void shouldFindAll() throws Exception {
-        MvcResult mvcResult = mockMvc.perform(
-                        MockMvcRequestBuilders.get(BASE_PATH)
-                )
-                .andExpect(MockMvcResultMatchers.status().isOk())
-                .andReturn();
-
-        boolean success = isSuccess(mvcResult);
-
-        assertTrue(success);
-    }
-
-    @Test
-    void shouldFindById() throws Exception {
+    void shouldGetFavourites() throws Exception {
         MvcResult mvcResult = mockMvc.perform(
                         MockMvcRequestBuilders.get(BASE_PATH + "/1000")
                 ).andExpect(MockMvcResultMatchers.status().isOk())
@@ -86,26 +68,12 @@ class UserControllerTest extends BaseTest {
     }
 
     @Test
-    void shouldDelete() throws Exception {
-        MvcResult mvcResult = mockMvc.perform(
-                        MockMvcRequestBuilders.delete(BASE_PATH + "/1001")
-                ).andExpect(MockMvcResultMatchers.status().isOk())
-                .andReturn();
-
-        boolean success = isSuccess(mvcResult);
-
-        assertTrue(success);
-    }
-
-    @Test
-    void shouldUpdate() throws Exception {
-        UserUpdateRequestDTO userUpdateRequestDTO =
-                new UserUpdateRequestDTO("berkay","gulen","berkay1234","berkay123@gmail.com");
-
-        String body = objectMapper.writeValueAsString(userUpdateRequestDTO);
+    void shouldRemove() throws Exception {
+        FavouriteCitiesSaveOrDeleteRequestDTO request = new FavouriteCitiesSaveOrDeleteRequestDTO(1001L,"London");
+        String body = objectMapper.writeValueAsString(request);
 
         MvcResult mvcResult = mockMvc.perform(
-                        MockMvcRequestBuilders.put(BASE_PATH+"/1004")
+                        MockMvcRequestBuilders.delete(BASE_PATH + "/delete")
                                 .content(body)
                                 .contentType(MediaType.APPLICATION_JSON)
                 ).andExpect(MockMvcResultMatchers.status().isOk())
