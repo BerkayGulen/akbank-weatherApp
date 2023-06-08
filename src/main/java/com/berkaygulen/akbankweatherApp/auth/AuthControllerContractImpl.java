@@ -17,12 +17,10 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 @Slf4j
 public class AuthControllerContractImpl implements AuthControllerContract {
+
     private final UserEntityService userEntityService;
     private PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
     String hashedPassword = passwordEncoder.encode("1231234");
-
-
-
 
     @Override
     public UserDTO login(LoginRequestDTO loginRequestDTO) {
